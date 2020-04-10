@@ -10,17 +10,17 @@ const purgeCSS = {
       './app/index.html',
       './app/templates/**/*.hbs',
       './app/components/**/*.hbs',
-      './app/components/**/*.js'
+      './app/components/**/*.js',
     ],
-    defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || []
-  }
+    defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
+  },
 };
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
     'ember-service-worker': {
       registrationStrategy: 'async',
-      versionStrategy: 'every-build'
+      versionStrategy: 'every-build',
     },
 
     postcssOptions: {
@@ -29,19 +29,19 @@ module.exports = function(defaults) {
           {
             module: require('postcss-import'),
             options: {
-              path: ['node_modules']
-            }
+              path: ['node_modules'],
+            },
           },
           require('tailwindcss')('./config/tailwind.config.js'),
-          ...(isProduction ? [purgeCSS] : [])
-        ]
-      }
+          ...(isProduction ? [purgeCSS] : []),
+        ],
+      },
     },
 
     newVersion: {
       enabled: true,
-      useAppVersion: true
-    }
+      useAppVersion: true,
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

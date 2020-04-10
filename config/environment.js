@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   const ENV = {
     modulePrefix: 'ember-octane-template',
     environment,
@@ -13,8 +13,8 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
@@ -22,7 +22,7 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    API_HOST: process.env['API_HOST']
+    API_HOST: process.env['API_HOST'],
   };
 
   if (environment === 'development') {

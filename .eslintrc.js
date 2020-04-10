@@ -5,17 +5,17 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
-      legacyDecorators: true
-    }
+      legacyDecorators: true,
+    },
   },
   plugins: ['ember'],
   extends: [
     'eslint:recommended',
     'plugin:ember/octane',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   env: {
-    browser: true
+    browser: true,
   },
   overrides: [
     // node files
@@ -28,14 +28,14 @@ module.exports = {
         'blueprints/*/index.js',
         'config/**/*.js',
         'lib/*/index.js',
-        'server/**/*.js'
+        'server/**/*.js',
       ],
       parserOptions: {
-        sourceType: 'script'
+        sourceType: 'script',
       },
       env: {
         browser: false,
-        node: true
+        node: true,
       },
       plugins: ['node'],
       rules: Object.assign(
@@ -46,9 +46,9 @@ module.exports = {
 
           // this can be removed once the following is fixed
           // https://github.com/mysticatea/eslint-plugin-node/issues/77
-          'node/no-unpublished-require': 'off'
+          'node/no-unpublished-require': 'off',
         }
-      )
-    }
-  ]
+      ),
+    },
+  ],
 };
