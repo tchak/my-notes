@@ -9,10 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: mydea/actions-ember-testing@v1
+    - uses: volta-cli/action@v1
       with:
         node-version: 12
         yarn-version: 1.19.2
+    - uses: mydea/actions-ember-testing@v2
     - name: Install dependencies
       run: yarn install
     - name: Lint JS
