@@ -3,12 +3,12 @@
 module.exports = {
   app: {
     javascript: {
-      pattern: ['assets/vendor-*.js', 'assets/ember-octane-template-*.js'],
+      pattern: ['assets/vendor-*.js', 'assets/my-notes-*.js'],
       limit: '200KB',
       compression: 'gzip',
     },
     'javascript [brotli]': {
-      pattern: ['assets/vendor-*.js', 'assets/ember-octane-template-*.js'],
+      pattern: ['assets/vendor-*.js', 'assets/my-notes-*.js'],
       limit: '150KB',
       compression: 'brotli',
     },

@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'ember-octane-template',
+    modulePrefix: 'my-notes',
     environment,
     rootURL: '/',
     locationType: 'auto',
