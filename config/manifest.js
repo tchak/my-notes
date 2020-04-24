@@ -1,12 +1,9 @@
 'use strict';
 
 module.exports = function (/* environment, appConfig */) {
-  // See https://zonkyio.github.io/ember-web-app for a list of
-  // supported properties
-
   return {
-    name: 'Octane App',
-    short_name: 'OA',
+    name: 'My Notes',
+    short_name: 'My Notes',
     description: '',
     start_url: '/',
     display: 'standalone',
