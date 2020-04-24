@@ -1,0 +1,5 @@
+{{#if @model.token}}
+  <Notes @notes={{@model.notes}} />
+{{else}}
+  <Authenticate />
+{{/if}}
